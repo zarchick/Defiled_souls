@@ -1,0 +1,70 @@
+/* ===== СБРОСЫ ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;color:#fff;}
+body{background:#080808;}
+
+/* ===== КНОПКИ ===== */
+.btn-red{
+  display:inline-block;
+  margin:5px 0;
+  padding:13px 20px;
+  background:#c00;
+  color:#fff;
+  text-decoration:none;
+  font-size:1.1rem;
+  border-radius:15px;
+  transition:.3s;
+}
+.btn-red:hover{transform:scale(1.05);box-shadow:0 0 20px #ff3333aa;}
+
+.btn-back{
+  display:inline-block;
+  padding:12px 30px;
+  background:#c00;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+}
+.btn-back:hover{transform:scale(1.05);}
+
+/* ===== СОЦБАР ===== */
+.social-bar{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:10px 0;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(4px);
+  z-index:100;
+}
+.btn-social{
+  padding:8px 16px;
+  border-radius:6px;
+  background:#c00;
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn-social:hover{
+  background:#ff3333;
+  transform:translateY(-2px);
+}
+
+/* ===== ПЛЕЕР-БАЗА (подключается везде) ===== */
+.player-label{
+  text-align:center;
+  font-size:1rem;
+  margin:0 auto -20px;
+  width:fit-content;
+  color:#ccc;
+  letter-spacing:1px;
+}
+.footer-center{
+  display:flex;
+  justify-content:center;
+  padding-bottom:40px;
+}

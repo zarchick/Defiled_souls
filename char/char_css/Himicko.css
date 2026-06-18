@@ -1,0 +1,85 @@
+/* ===== ЦВЕТА ПЕРСОНАЖА ===== */
+:root{
+  --main-color: rgb(141, 87, 192);
+  --main-glow: rgb(141, 87, 192);
+  --btn-back: rgb(141, 87, 192);
+  --border-color: rgb(141, 87, 192);
+  --text-shadow: 0 0 10px rgb(141, 87, 192);
+}
+
+/* ===== ЛОР ===== */
+.lore-text{
+  border-left: 4px solid var(--border-color);
+  border-right: 4px solid var(--border-color);
+}
+.lore-text h1{
+  text-shadow: var(--text-shadow);
+}
+.lore-text h2{
+  color: var(--main-color);
+}
+
+/* ===== КНОПКА НАЗАД ===== */
+.btn-back{
+  background: var(--btn-back);
+}
+
+/* ===== ПЛЕЕР ===== */
+.player{
+  border-color: var(--border-color);
+}
+.player-progress::-webkit-slider-thumb,
+.player-volume::-webkit-slider-thumb{
+  background: var(--main-color);
+}
+.player-progress,
+.player-volume{
+  --progress: 0;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) calc(var(--progress) * 1%),
+    #444 calc(var(--progress) * 1%),
+    #444 100%
+  );
+}
+
+/* ===== АНИМАЦИИ ===== */
+.lore-text{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp .8s .4s forwards;
+}
+
+.player{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp .8s .8s forwards;
+}
+
+.player-label{
+    opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp .8s .8s forwards;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px){
+  .lore-text{
+    margin: 0 auto;
+    padding: 20px 15px;
+    background: none;
+    border: none;
+    border-radius: 0;
+  }
+  .player{
+    width: 90%;  /* ← на телефоне плеер уже */
+  }
+}

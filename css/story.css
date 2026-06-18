@@ -1,0 +1,91 @@
+.story-header{
+  padding:40px 20px;
+  text-align:center;
+}
+.story-header h1{
+  font-size:2.8rem;
+  margin-bottom:20px;
+  text-shadow:0 0 10px #c00;
+}
+
+.chapters{
+  padding:40px 20px;
+}
+.chapters-wrapper{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.chapter-card{
+  width:220px;
+  height:350px;
+  display:flex;
+  flex-direction:column;
+  border:3px solid #c00;
+  border-radius:10px;
+  overflow:hidden;
+  background:#0a0a0a;
+  text-decoration:none;
+  transition:transform .2s, box-shadow .2s, opacity .2s;
+}
+.chapter-card img{
+  width:100%;
+  height:75%;
+  object-fit:cover;
+}
+.chapter-card .title{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.1rem;
+  font-weight:bold;
+}
+.chapter-card .soon{
+  display:block;
+  font-size:.9rem;
+  color:#888;
+  text-align:center;
+  padding-bottom:12px;
+}
+
+/* активная */
+.chapter-card.active{
+  cursor:pointer;
+}
+.chapter-card.active:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 6px 2px #ff3333,
+             0 0 12px 6px #ff0000,
+             0 0 20px 10px #cc0000;
+}
+/* неактивная */
+.chapter-card.disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+/* ===== ЦВЕТА ГЛАВ ===== */
+.chapter-card:nth-child(1){border-color:#00bfff;}
+.chapter-card:nth-child(1).active:hover{
+  box-shadow:0 0 6px 2px #00bfff,
+             0 0 12px 6px #00bfff,
+             0 0 20px 10px #00bfff !important;
+}
+.chapter-card:nth-child(2){border-color:#c00;}
+.chapter-card:nth-child(3){border-color:lab(64.48% -23.9 5.39);}
+.chapter-card:nth-child(3).active:hover{
+  box-shadow:0 0 6px 2px lab(64.48% -23.9 5.39),
+             0 0 12px 6px lab(64.48% -23.9 5.39),
+             0 0 20px 10px lab(64.48% -23.9 5.39);
+}
+.chapter-card:nth-child(4){border-color:hwb(286 1% 49%);}
+.chapter-card:nth-child(4).active:hover{
+  box-shadow:0 0 6px 2px lab(22.51% 53 -49.25),
+             0 0 12px 6px lab(22.51% 53 -49.25),
+             0 0 20px 10px lab(22.51% 53 -49.25);
+}
+.chapter-card:nth-child(5),
+.chapter-card:nth-child(6){border-color:hsl(0,0%,37%);}

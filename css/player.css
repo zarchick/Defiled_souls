@@ -1,0 +1,84 @@
+.player{
+  margin:40px auto 30px;
+  width:340px;
+  background:rgba(0,0,0,.65);
+  border:2px solid #c00;
+  border-radius:12px;
+  padding:10px 14px;
+}
+.player-controls{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.player-btn{
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+}
+.player-btn:hover{color:#ff7b00;}
+.player-btn svg.icon{
+  width:24px;
+  height:24px;
+  fill:currentColor;
+}
+.player-time{
+  font-size:.9rem;
+  min-width:2.5rem;
+}
+.player-progress{
+  flex:none;
+  width:120px;
+  height:4px;
+  -webkit-appearance:none;
+  appearance:none;
+  background:#444;
+  border-radius:2px;
+}
+.player-progress::-webkit-slider-thumb,
+.player-volume::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  appearance:none;
+  width:12px;
+  height:12px;
+  background:#c00;
+  border-radius:50%;
+}
+
+.volume-wrap{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+.player-volume{
+  width:60px;
+  height:4px;
+  margin-left:8px;
+  -webkit-appearance:none;
+  appearance:none;
+  background:#444;
+  border-radius:2px;
+}
+
+/* цветная дорожка */
+.player-progress,
+.player-volume{
+  --progress:0;
+  background:linear-gradient(
+    to right,
+    #c00 0%,
+    #c00 calc(var(--progress) * 1%),
+    #444 calc(var(--progress) * 1%),
+    #444 100%
+  );
+  transition:background .1s;
+}
+
+/* защита от скролла */
+.player-volume,
+.player-progress{
+  -webkit-user-select:none;
+  user-select:none;
+  touch-action:none;
+}

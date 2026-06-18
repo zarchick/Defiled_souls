@@ -1,0 +1,96 @@
+.prolog-title,
+.prolog-title{
+  text-shadow:0 0 8px lab(22.51% 53 -49.25),0 0 20px lab(22.51% 53 -49.25);
+  animation:pulse 3s infinite alternate;
+}
+.prolog-text p{
+  margin-bottom:2em;
+}
+
+.prolog-text{
+  margin:40px auto;
+  max-width:800px;
+  padding:clamp(20px,4vw,30px);
+  background:rgba(0,0,0,.55);
+  border-left:4px solid #c00;
+  border-right:4px solid #c00;
+  border-radius:8px;
+  text-align:left;
+}
+.prolog-text h1{
+  font-size:3rem;
+  margin-bottom:20px;
+  text-shadow:0 0 10px #c00;
+}
+.prolog-text h2{
+  font-size:1.5rem;
+  color:#c00;
+  margin-bottom:15px;
+}
+.prolog-text p{
+  line-height:1.7;
+  font-size:1.1rem;
+  margin-bottom:1.5em;
+}
+.btn-back{
+  display:block;
+  width:fit-content;
+  margin:60px auto 40px;
+  padding:12px 30px;
+  background:#c00;
+  color:#fff;
+  border-radius:6px;
+  transition:.3s;
+}
+.btn-back:hover{
+  transform:scale(1.05);
+}
+.prolog-title{
+  text-align:center;
+  font-size:3.5rem;
+  margin-top:5vh;
+  animation-delay:0.2s;
+}
+
+@keyframes fadeIn{
+  to{opacity:1;}
+}
+.btn-back{
+  display:block;
+  width:fit-content;
+  margin:60px auto 40px;
+  padding:12px 30px;
+  background:lab(22.51% 53 -49.25);
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  transition:.3s;
+}
+.btn-back:hover{
+  transform:scale(1.05);
+}
+
+.prolog-text{
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp .8s .4s forwards;
+}
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* телефоны */
+@media (max-width: 768px){
+  .prolog-text{
+    margin:0 auto;
+    padding:20px 15px;
+    background:none;
+    border:none;
+    border-radius:0;
+  }
+}
+.prolog-text{
+  border-left:4px solid lab(22.51% 53 -49.25);
+  border-right:4px solid lab(22.51% 53 -49.25);
+  border-radius:8px;
+}

@@ -1,0 +1,70 @@
+/* ===== ФОН ===== */
+.lore-bg{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  z-index:-1;
+}
+
+/* ===== КАРТИНКА СЛЕВА ===== */
+.char-img{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100vh;
+  z-index:10;
+  transform:translateX(-100%);
+  animation:slidePic .6s .05s forwards;
+  will-change:transform;
+}
+@keyframes slidePic{
+  from{transform:translateX(-100%);}
+  to{transform:translateX(0);}
+}
+.char-img img{
+  height:100%;
+  width:auto;
+}
+
+/* ===== ТЕКСТ ===== */
+.lore-text{
+  position:relative;
+  margin:40px auto;
+  max-width:720px;
+  padding:clamp(20px,4vw,60px);
+  background:linear-gradient(
+    90deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.75) 350px,
+    rgba(0,0,0,.9) 100%
+  );
+  border-left:4px solid #c00;
+  border-right:4px solid #c00;
+  border-radius:8px;
+  text-align:left;
+}
+.lore-text h1{
+  font-size:3rem;
+  margin-bottom:20px;
+  text-shadow:0 0 10px #c00;
+}
+.lore-text h2{
+  font-size:1.5rem;
+  color:#c00;
+  margin-bottom:15px;
+}
+.lore-text p{
+  line-height:1.7;
+  font-size:1.1rem;
+  margin-bottom:40px;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width:1500px){
+  .char-img{display:none !important;}
+  .lore-text{
+    margin:0 auto !important;
+    padding:20px 15px !important;
+    max-width:100vw !important;
+  }
+}
